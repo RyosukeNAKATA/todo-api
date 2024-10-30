@@ -8,7 +8,7 @@ WORKDIR /app
 
 # 後のためのユーザーを作成
 RUN adduser book && chown -R book /app
-USER BOOK
+USER book
 COPY --from=builder ./app/target/release/app ./target/release/app
 
 ENV PORT 8080
